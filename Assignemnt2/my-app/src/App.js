@@ -5,6 +5,7 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
+    <div id="root">
     <BrowserRouter basename="/my-app">
     <Routes>
       <Route exact path="/" component={Home} />
@@ -12,6 +13,7 @@ function App() {
       <Route path="/contact" component={Contact} />
     </Routes>
   </BrowserRouter>
+  </div>
   );
 }
 
