@@ -1,18 +1,25 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
+
+import AppRoutes from './routes';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
     <div id="root">
-    <BrowserRouter basename="/my-app">
-    <Routes>
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/contact" component={Contact} />
-    </Routes>
-  </BrowserRouter>
+  <div className="App">
+      <header className="App-header">
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <AppRoutes />
+      </main>
+    </div>
+  
   </div>
   );
 }
