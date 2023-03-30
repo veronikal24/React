@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div id="root">
+ 
   <div className="App">
       <header className="App-header">
         <nav>
@@ -19,8 +19,6 @@ function App() {
         <AppRoutes />
       </main>
     </div>
-  
-  </div>
   );
 }
 
