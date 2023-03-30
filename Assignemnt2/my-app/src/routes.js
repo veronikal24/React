@@ -1,17 +1,19 @@
-import { Switch, Route } from 'react-router-dom';
 
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
-const Routes = () => {
+function AppRoutes() {
   return (
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/contact" component={Contact} />
-    </Switch>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
-};
+}
 
-export default Routes;
+export default AppRoutes;
