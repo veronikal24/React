@@ -7,7 +7,7 @@ import NotFound from './pages/NotFound';
 
   
 function AppRoutes() {
-  const basename = "/my-app"; // define basename here
+  const basename = "/React"; // define basename here
   return (
     <BrowserRouter basename={basename}>
     <Routes>
