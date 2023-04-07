@@ -1,21 +1,11 @@
-
-import Home from './Home';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React from 'react';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-     
-        <div className="content">
-          <Routes>
-            <Route path="/React/">
-              <Home />
-            </Route>
-          </Routes>
-        </div>
-      </div>
-    </Router>
+    <div>
+      <h1>Welcome to my React app!</h1>
+      <p>Use the links above to navigate.</p>
+    </div>
   );
 }
 
