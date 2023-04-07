@@ -7,6 +7,7 @@ function App() {
  
   <div className="App">
       <header className="App-header">
+      <base href="/React" />
         <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
