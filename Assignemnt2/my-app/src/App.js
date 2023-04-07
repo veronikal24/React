@@ -1,27 +1,22 @@
-import React, { Component } from 'react';
-import { HashRouter, Route, Link } from "react-router-dom";
+import Navbar from './Navbar';
+import Home from './Home';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-class App extends Component {
-  render() {
-    return (
-      <HashRouter basename="/">
-        <div>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-          </ul>
-
-          <hr />
-  
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <Switch>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
         </div>
-      </HashRouter>
-    );
-  }
+      </div>
+    </Router>
+  );
 }
-
-const Home = () => <div><h2>Home</h2></div>
-const About = () => <div><h2>About</h2></div>
 
 export default App;
