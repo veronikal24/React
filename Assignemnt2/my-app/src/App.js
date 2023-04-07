@@ -9,7 +9,7 @@ function App() {
         <Navbar />
         <div className="content">
           <Routes>
-            <Route path="/">
+            <Route path="/React">
               <Home />
             </Route>
           </Routes>
