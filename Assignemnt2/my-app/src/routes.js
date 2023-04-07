@@ -8,7 +8,7 @@ import NotFound from './pages/NotFound';
   
 function AppRoutes() {
   return (
-    <BrowserRouter basename= "/React" >
+    <BrowserRouter basename= "/React/" >
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
