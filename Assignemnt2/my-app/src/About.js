@@ -1,22 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 function About() {
-  const { search } = useLocation();
-  const params = new URLSearchParams(search);
-  const id = params.get('id');
-
+  const { id } = useParams();
   const [pokemonData, setPokemonData] = useState(null);
 
   useEffect(() => {
     async function fetchPokemonData() {
-      try {
-        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}?fields=name,height,weight,abilities,sprites`);
-        setPokemonData(response.data);
-      } catch (error) {
-        console.error(error);
-      }
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}?fields=name,height,weight,abilities,sprites`);
+      const data = await response.json();
+      setPokemonData(data);
     }
     fetchPokemonData();
   }, [id]);
