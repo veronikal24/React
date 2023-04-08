@@ -18,7 +18,7 @@ code {
 }
 
 .pokemon-card {
-  background-color: #e48ec3;
+  background-color: #dfadcc;
   padding: 20px;
   text-align: center;
 }
@@ -35,7 +35,7 @@ code {
 }
 
 .next-button button {
-  background-color: #007bff;
+  background-color: #90b9e4;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -43,5 +43,5 @@ code {
 }
 
 .next-button button:hover {
-  background-color: #0069d9;
+  background-color: #92bce9;
 }

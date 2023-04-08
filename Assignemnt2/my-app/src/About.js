@@ -18,7 +18,7 @@ function About() {
   }, [id]);
 
   if (!pokemonData) {
-    return <div><h2>Loading...</h2></div>;
+    return <div><h2>Loading........</h2></div>;
   }
 
   const { name, sprites, height, weight, abilities } = pokemonData;
