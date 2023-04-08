@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import './index.css'; // import the CSS file
 import { Link } from 'react-router-dom';
-import './myStyles.css';
+
 function Pokedex() {
   const [pokemonList, setPokemonList] = useState([]);
 
