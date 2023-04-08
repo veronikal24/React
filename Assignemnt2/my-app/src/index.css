@@ -17,8 +17,8 @@ code {
   grid-gap: 20px;
 }
 
-.pokemon-item {
-  background-color: #f5f5f5;
+.pokemon-card {
+  background-color: #e48ec3;
   padding: 20px;
   text-align: center;
 }
