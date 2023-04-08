@@ -39,7 +39,7 @@ function About() {
           <li key={ability.ability.name}>{ability.ability.name}</li>
         ))}
       </ul>
-       <button onClick={() => navigate(-1)}>Back</button>
+      
     </div>
   );
 }
