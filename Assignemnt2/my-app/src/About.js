@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 
 function About() {
@@ -10,9 +11,12 @@ function About() {
 
   useEffect(() => {
     async function fetchPokemonData() {
-      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}?fields=name,height,weight,abilities,sprites`);
-      const data = await response.json();
-      setPokemonData(data);
+      try {
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}?fields=name,height,weight,abilities,sprites`);
+        setPokemonData(response.data);
+      } catch (error) {
+        console.error(error);
+      }
     }
     fetchPokemonData();
   }, [id]);
@@ -42,4 +46,5 @@ function About() {
     </div>
   );
 }
+
 export default About;
