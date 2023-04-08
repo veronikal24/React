@@ -1,40 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function Home() {
-  const [totalWeight, setTotalWeight] = useState(null);
+function Pokedex() {
+  const [pokemonList, setPokemonList] = useState([]);
 
   useEffect(() => {
-    async function printTotalWeight() {
-      const responses = await Promise.all([
-        getPokemon("pikachu"),
-        getPokemon("bulbasaur"),
-        getPokemon("charmander"),
-        getPokemon("squirtle"),
-        getPokemon("butterfree"),
-        getPokemon("pidgeotto"),
+    async function fetchPokemonData() {
+      const pokemonData = await Promise.all([
+        fetchPokemonDataByName("bulbasaur"),
+        fetchPokemonDataByName("ivysaur"),
+        fetchPokemonDataByName("venusaur"),
+        fetchPokemonDataByName("charmander"),
+        fetchPokemonDataByName("charmeleon"),
+        fetchPokemonDataByName("charizard"),
+        fetchPokemonDataByName("squirtle"),
+        fetchPokemonDataByName("wartortle"),
+        fetchPokemonDataByName("blastoise"),
+        fetchPokemonDataByName("caterpie"),
+        fetchPokemonDataByName("metapod"),
+        fetchPokemonDataByName("butterfree"),
+        fetchPokemonDataByName("pidgeotto"),
       ]);
-      const promises = responses.map((response) => response.json());
-      const pokemonList = await Promise.all(promises);
-      const weightSum = pokemonList.reduce(
-        (weightSum, { weight }) => weightSum + weight,
-        0
-      );
-      const avgWeight = (weightSum / 10).toFixed(1);
-      setTotalWeight(avgWeight);
+
+      setPokemonList(pokemonData);
     }
 
-    printTotalWeight();
+    fetchPokemonData();
   }, []);
 
-  function getPokemon(name) {
-    return fetch("https://pokeapi.co/api/v2/pokemon/" + name);
+  async function fetchPokemonDataByName(name) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+    const data = await response.json();
+
+    return {
+      name: data.name,
+      weight: data.weight,
+      image: data.sprites.front_default,
+    };
   }
 
   return (
     <div>
       <h2>POKEDEX PAGE, See All the Cool Pokemons you can use</h2>
-      <h2>Total weight of the pokemons: {totalWeight}</h2>
       <nav>
         <ul>
           <li>
@@ -43,10 +50,16 @@ function Home() {
             </Link>
           </li>
         </ul>
+        {pokemonList.map((pokemon) => (
+          <div key={pokemon.name}>
+            <h3>{pokemon.name}</h3>
+            <p>Weight: {pokemon.weight}</p>
+            <img src={pokemon.image} alt={`${pokemon.name} sprite`} />
+          </div>
+        ))}
       </nav>
     </div>
   );
 }
 
-export default Home;
-
+export default Pokedex;
