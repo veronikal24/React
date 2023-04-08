@@ -27,9 +27,9 @@ function Pokedex() {
           </li>
         </ul>
       </nav>
-      <div className="pokemon-list">
+      <div className="pokedex-list">
         {pokemonList.map((pokemon) => (
-          <div className="pokemon-card" key={pokemon.name}>
+          <div className="pokemon" key={pokemon.name}>
             <h3>{pokemon.name}</h3>
             <img
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.split('/')[6]}.png`}
