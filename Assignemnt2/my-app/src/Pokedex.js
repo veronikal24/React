@@ -4,6 +4,7 @@ import { Link, useHistory} from 'react-router-dom';
 
 
 
+
 function Pokedex() {
   const [pokemonList, setPokemonList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
