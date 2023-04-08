@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation} from 'react-router-dom';
 
 function About() {
-  const { id } = useParams();
+  const { search } = useLocation();
+  const params = new URLSearchParams(search);
+  const id = params.get('id');
+
+
   const [pokemonData, setPokemonData] = useState(null);
 
   useEffect(() => {
@@ -15,7 +19,7 @@ function About() {
   }, [id]);
 
   if (!pokemonData) {
-    return <div><h2>Loading........</h2></div>;
+    return <div><h2>Loading...</h2></div>;
   }
 
   const { name, sprites, height, weight, abilities } = pokemonData;
@@ -36,6 +40,7 @@ function About() {
           <li key={ability.ability.name}>{ability.ability.name}</li>
         ))}
       </ul>
+    
     </div>
   );
 }

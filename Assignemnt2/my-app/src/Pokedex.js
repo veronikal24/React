@@ -41,7 +41,7 @@ function Pokedex() {
           {pokemonList.map((pokemon) => (
             <div key={pokemon.id} className="pokemon-card">
               <Link
-                to={`/about/${pokemon.id}`}
+                to={`/about?id=${pokemon.id}`}
                 state={{ pokemonData: pokemon }}
               >
                 <h3>{pokemon.name}</h3>
@@ -62,4 +62,5 @@ function Pokedex() {
     </div>
   );
 }
+
 export default Pokedex;
