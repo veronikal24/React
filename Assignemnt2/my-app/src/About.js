@@ -27,6 +27,7 @@ function About() {
   return (
     <div>
       <h2>About Pokemon {name}</h2>
+      <button onClick={() => navigate(-1)}>Back</button>
       {sprites ? (
         <img src={sprites.front_default} alt={`${name} sprite`} />
       ) : (
@@ -40,7 +41,7 @@ function About() {
           <li key={ability.ability.name}>{ability.ability.name}</li>
         ))}
       </ul>
-      <button onClick={() => navigate(-1)}>Back</button>
+     
     </div>
   );
 }
