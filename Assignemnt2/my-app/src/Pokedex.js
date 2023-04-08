@@ -39,19 +39,13 @@ function Pokedex() {
       <nav>
         <ul className="pokemon-list">
           {pokemonList.map((pokemon) => (
-            <li key={pokemon.id} className="pokemon-card">
-              <Link
-                to={`/about/${pokemon.id}`}
-                state={{ pokemonData: pokemon }}
-              >
-                <h3>{pokemon.name}</h3>
-                <img
-                  src={pokemon.sprites.front_default}
-                  alt={`${pokemon.name} sprite`}
-                />
-              </Link>
-            </li>
-          ))}
+        <div key={pokemon.id} className="pokemon-card">
+          <Link to={`/about?id=${pokemon.id}`} state={{ pokemonData: pokemon }}>
+            <h3>{pokemon.name}</h3>
+            <img src={pokemon.sprites.front_default} alt={`${pokemon.name} sprite`} />
+          </Link>
+        </div>
+      ))}
         </ul>
         <div className="pagination">
           <button onClick={handlePrevPage}>Prev</button>
