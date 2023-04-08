@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function About() {
+function Pokedex() {
   return (
     <div>
       <h2>About Pokemon</h2>
@@ -16,4 +16,4 @@ function About() {
   );
 }
 
-export default About;
+export default Pokedex;
