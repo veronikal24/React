@@ -40,7 +40,10 @@ function Pokedex() {
         <ul className="pokemon-list">
           {pokemonList.map((pokemon) => (
             <div key={pokemon.id} className="pokemon-card">
-              <Link to={`/about/${pokemon.id}`}>
+              <Link
+                to={`/about?id=${pokemon.id}`}
+                state={{ pokemonData: pokemon }}
+              >
                 <h3>{pokemon.name}</h3>
                 <img
                   src={pokemon.sprites.front_default}
