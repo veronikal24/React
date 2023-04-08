@@ -10,7 +10,6 @@ function About() {
   return (
     <div>
       <h2>About Pokemon {name}</h2>
-      {/* Display data about the Pokemon */}
     </div>
   );
 }
