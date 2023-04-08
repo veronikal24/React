@@ -10,7 +10,7 @@ function About() {
 
   useEffect(() => {
     async function fetchPokemonData() {
-      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/1`);
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}?fields=name,height,weight,abilities`);
       const data = await response.json();
       setPokemonData(data);
     }
