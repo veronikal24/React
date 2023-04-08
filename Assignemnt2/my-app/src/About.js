@@ -21,7 +21,7 @@ function About() {
     return <div><h2>Loading...</h2></div>;
   }
 
-  const { name, sprites, height, weight, abilities, moves } = pokemonData;
+  const { name, sprites, height, weight } = pokemonData;
 
   return (
     <div>
@@ -30,17 +30,8 @@ function About() {
       <p>Height: {height}</p>
       <p>Weight: {weight}</p>
       <p>Abilities:</p>
-      <ul>
-        {abilities.map((ability) => (
-          <li key={ability.ability.name}>{ability.ability.name}</li>
-        ))}
-      </ul>
-      <p>Moves:</p>
-      <ul>
-        {moves.map((move) => (
-          <li key={move.move.name}>{move.move.name}</li>
-        ))}
-      </ul>
+   
+  
     </div>
   );
 }
