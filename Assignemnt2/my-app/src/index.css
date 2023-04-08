@@ -20,7 +20,7 @@ code {
 .pokemon {
   width: calc(33.33% - 10px);
   margin-bottom: 20px;
-  border: 1px solid #cccccc;
+  border: 1px solid #e494cc;
   padding: 10px;
   text-align: center;
 }
