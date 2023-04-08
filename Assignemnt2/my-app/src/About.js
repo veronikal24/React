@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 function About() {
   const { search } = useLocation();
   const params = new URLSearchParams(search);
-  const id = params.get('id');
+
+  const { id } = useParams();
 
   const [pokemonData, setPokemonData] = useState(null);
+
 
   useEffect(() => {
     async function fetchPokemonData() {
