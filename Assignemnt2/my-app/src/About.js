@@ -10,6 +10,7 @@ function About() {
 
   useEffect(() => {
     async function fetchPokemonData() {
+      if (!id) return; // add this check to ensure id is not null
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}?fields=name,height,weight,abilities,sprites`);
       const data = await response.json();
       setPokemonData(data);
