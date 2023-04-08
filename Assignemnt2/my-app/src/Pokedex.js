@@ -51,12 +51,13 @@ function Pokedex() {
           </li>
         </ul>
         {pokemonList.map((pokemon) => (
-          <div key={pokemon.name}>
-            <h3>{pokemon.name}</h3>
-            <p>Weight: {pokemon.weight}</p>
-            <img src={pokemon.image} alt={`${pokemon.name} sprite`} />
-          </div>
-        ))}
+  <div key={pokemon.name} style={{ border: '1px solid black', padding: '10px', marginBottom: '10px' }}>
+    <h3 style={{ color: 'blue', fontSize: '20px' }}>{pokemon.name}</h3>
+    <p>Weight: {pokemon.weight}</p>
+    <img style={{ maxWidth: '200px' }} src={pokemon.image} alt={`${pokemon.name} sprite`} />
+  </div>
+))}
+
       </nav>
     </div>
   );
