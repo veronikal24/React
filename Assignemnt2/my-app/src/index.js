@@ -11,7 +11,7 @@ ReactDOM.render(
 
     <Routes>
       <Route path="/" element={<Pokedex />} />
-      <Route path="/about/:name" element={<About />} />
+      <Route path="/about/:id" element={<About />} />
     </Routes>
 
     </BrowserRouter>
