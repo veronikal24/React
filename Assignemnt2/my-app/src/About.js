@@ -1,17 +1,18 @@
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 
 function About() {
-  const { search } = useLocation();
-  const params = new URLSearchParams(search);
-  const name = params.get('name');
-
-  // Use the `id` to fetch data about the Pokemon from an API or elsewhere
+  const { state: { pokemonData } } = useLocation();
 
   return (
     <div>
-      <h2>About Pokemon {name}</h2>
+      <h2>About {pokemonData.name}</h2>
+      <img src={pokemonData.sprites.front_default} alt={`${pokemonData.name} sprite`} />
+      <p>Height: {pokemonData.height}</p>
+      <p>Weight: {pokemonData.weight}</p>
     </div>
   );
 }
 
 export default About;
+
