@@ -27,9 +27,9 @@ function Pokedex() {
     setCurrentPage(currentPage - 1);
   }
 
-
-  const startIndex = (currentPage - 1) * 6;
-  const endIndex = startIndex + 6;
+   // Determining how many pokemons per page we need to see
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
   const currentPokemonList = pokemonList.slice(startIndex, endIndex);
 
   return (
@@ -62,16 +62,7 @@ function Pokedex() {
         <button onClick={handlePrevPageClick} disabled={currentPage === 1}>Prev</button>
         <button onClick={handleNextPage} disabled={endIndex >= pokemonList.length}>Next</button>
       </div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/about">
-              Click on a specific picture to go to About page
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      <button onClick={() => history.goBack()}>Go Back</button>
+ 
     </div>
 
   );
