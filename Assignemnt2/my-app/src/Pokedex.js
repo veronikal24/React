@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import './index.css';
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "./index.css";
 
 function Pokedex() {
   const [pokemonList, setPokemonList] = useState([]);
@@ -9,9 +9,13 @@ function Pokedex() {
 
   useEffect(() => {
     async function fetchPokemonList() {
-      const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=18&offset=${(page - 1) * 18}`);
+      const response = await fetch(
+        `https://pokeapi.co/api/v2/pokemon?limit=18&offset=${(page - 1) * 18}`
+      );
       const data = await response.json();
-      const promises = data.results.map((result) => fetch(result.url).then(response => response.json()));
+      const promises = data.results.map((result) =>
+        fetch(result.url).then((response) => response.json())
+      );
       const pokemonData = await Promise.all(promises);
       setPokemonList(pokemonData);
     }
@@ -36,9 +40,15 @@ function Pokedex() {
         <ul className="pokemon-list">
           {pokemonList.map((pokemon) => (
             <li key={pokemon.id} className="pokemon-card">
-            <Link to={{ pathname: `/about/${pokemon.id}`, state: { pokemonData: pokemon } }}>
+              <Link
+                to={`/about/${pokemon.id}`}
+                state={{ pokemonData: pokemon }}
+              >
                 <h3>{pokemon.name}</h3>
-                <img src={pokemon.sprites.front_default} alt={`${pokemon.name} sprite`} />
+                <img
+                  src={pokemon.sprites.front_default}
+                  alt={`${pokemon.name} sprite`}
+                />
               </Link>
             </li>
           ))}
