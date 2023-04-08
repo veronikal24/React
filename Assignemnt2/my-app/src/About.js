@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function About() {
   const { search } = useLocation();
   const params = new URLSearchParams(search);
   const id = params.get('id');
-
 
   const [pokemonData, setPokemonData] = useState(null);
 
@@ -40,7 +39,6 @@ function About() {
           <li key={ability.ability.name}>{ability.ability.name}</li>
         ))}
       </ul>
-    
     </div>
   );
 }
