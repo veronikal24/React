@@ -11,16 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.pokedex-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
 }
 
-.pokemon {
-  width: calc(33.33% - 10px);
-  margin-bottom: 20px;
-  border: 1px solid #e494cc;
-  padding: 10px;
+.pokemon-item {
+  background-color: #f5f5f5;
+  padding: 20px;
   text-align: center;
+}
+
+.pokemon-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.next-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.next-button button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.next-button button:hover {
+  background-color: #0069d9;
 }
