@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './index.css'; // import the CSS file
-import { Link, useHistory} from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 
 
 
@@ -9,7 +9,7 @@ function Pokedex() {
   const [pokemonList, setPokemonList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
-  const history = useHistory();
+  const history = useNavigate();
   useEffect(() => {
     async function fetchPokemonList() {
       const response = await fetch('https://pokeapi.co/api/v2/pokemon');
