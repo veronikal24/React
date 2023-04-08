@@ -39,7 +39,6 @@ function About() {
           <li key={ability.ability.name}>{ability.ability.name}</li>
         ))}
       </ul>
-      
     </div>
   );
 }
