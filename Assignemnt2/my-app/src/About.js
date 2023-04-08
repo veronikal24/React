@@ -1,20 +1,17 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
-function Pokedex() {
+function About() {
+  const { state: { pokemonData } } = useLocation();
+
   return (
     <div>
-      <h2>About Pokemon</h2>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Back to Pokedex</Link>
-          </li>
-        </ul>
-      </nav>
+      <h2>About {pokemonData.name}</h2>
+      <img src={pokemonData.sprites.front_default} alt={`${pokemonData.name} sprite`} />
+      <p>Height: {pokemonData.height}</p>
+      <p>Weight: {pokemonData.weight}</p>
     </div>
   );
 }
 
-export default Pokedex;
+export default About;
