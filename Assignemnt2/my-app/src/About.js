@@ -34,17 +34,24 @@ function About() {
 
   return (
     <div>
-    
-      <h2>About Pokemon {name}</h2>
+ 
       <div className="pokemon-card-about">
+           
+      <h2>About Pokemon {name}</h2>
       {sprites ? (
         <img className="pokemon-image " src={sprites.front_default} alt={`${name} sprite`} />
       ) : (
         <p>No sprite available</p>
       )}
-      <p>Height: {height}</p>
-      <p>Weight: {weight}</p>
-      <p>Abilities:</p>
+      <div class="container">
+      <ul class="abilities">
+     
+          <li> Height: {height} </li>
+          <li> Weight: {weight}</li>
+          <li> Abilities: </li>
+     
+      </ul>
+      </div>
       <div class="container">
       <ul class="abilities">
         {abilities.map((ability) => (
