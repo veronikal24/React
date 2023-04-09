@@ -17,10 +17,16 @@ h2 {
     text-align: center;
 
 }
-ul{
+ul,li{
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
   text-align: center;
+}
+Link {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+  text-align: center;
+  text-decoration-color: black;
 }
 .pokemon-list {
   display: grid;
