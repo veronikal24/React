@@ -45,7 +45,7 @@ function Pokedex() {
   state={{ pokemonData: pokemon }}
 >
   <h3>{pokemon.name}</h3>
-  <img
+  <img className="pokemon-image "
     src={pokemon.sprites.front_default}
     alt={`${pokemon.name} sprite`}
   />
