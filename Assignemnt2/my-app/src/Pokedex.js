@@ -35,7 +35,8 @@ function Pokedex() {
 
   return (
     <div>
-      <h2>POKEDEX PAGE, See All the Cool Pokemons you can use</h2>
+      <h2>Pokedex</h2>
+      <h3>Your local Pokemon Dealer</h3>
       <nav>
         <ul className="pokemon-list">
           {pokemonList.map((pokemon) => (
