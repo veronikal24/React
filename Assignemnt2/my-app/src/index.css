@@ -46,6 +46,7 @@ ul.general {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
   list-style-type: none;
+  margin-bottom: 10px;
 }
 Link {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
