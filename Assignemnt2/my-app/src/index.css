@@ -34,8 +34,9 @@ div.container {
 }
 
 ul.abilities {
+  margin-top: -50px;
   display: inline-block;
-  text-align: left;
+  text-align: right;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
 }
