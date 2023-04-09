@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 function About() {
@@ -9,6 +9,7 @@ function About() {
   const { id } = useParams();
 
   const [pokemonData, setPokemonData] = useState(null);
+  const navigate = useNavigate();
 
 
   useEffect(() => {
@@ -32,6 +33,7 @@ function About() {
 
   return (
     <div>
+       <button onClick={() => navigate(-1)}>Back</button>
       <h2>About Pokemon {name}</h2>
       {sprites ? (
         <img src={sprites.front_default} alt={`${name} sprite`} />
