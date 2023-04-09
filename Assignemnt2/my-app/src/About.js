@@ -45,11 +45,13 @@ function About() {
       <p>Height: {height}</p>
       <p>Weight: {weight}</p>
       <p>Abilities:</p>
-      <ul>
+      <div class="container">
+      <ul class="abilities">
         {abilities.map((ability) => (
           <li key={ability.ability.name}>{ability.ability.name}</li>
         ))}
       </ul>
+      </div>
       <button class = "next-button" onClick={() => navigate(-1)}>Back</button>
       </div>
     </div>

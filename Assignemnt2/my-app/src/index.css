@@ -27,6 +27,19 @@ li{
   monospace;
   text-align: center;
 }
+div.container {
+  text-align: center;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+  text-align: center;
+}
+
+ul.abilities {
+  display: inline-block;
+  text-align: left;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
 Link {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
