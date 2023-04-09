@@ -48,8 +48,8 @@ function About() {
         )}
         <div class="container">
           <ul class="general">
-            <li> Height: {height} </li>
-            <li> Weight: {weight}</li>
+            <li> Height: {height} cm </li>
+            <li> Weight: {weight} kg </li>
             <li>
               {" "}
               <b>Abilities:</b>{" "}
