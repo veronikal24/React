@@ -10,7 +10,7 @@ function Pokedex() {
   useEffect(() => {
     async function fetchPokemonList() {
       const response = await fetch(
-        `https://pokeapi.co/api/v2/pokemon?limit=18&offset=${(page - 1) * 18}`
+        `https://pokeapi.co/api/v2/pokemon?limit=18&offset=${(page - 1) * 9}`
       );
       const data = await response.json();
       const promises = data.results.map((result) =>
