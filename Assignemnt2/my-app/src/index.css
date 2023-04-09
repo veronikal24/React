@@ -11,7 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-h2 {
+h2, h3 {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
     text-align: center;
@@ -61,10 +61,11 @@ Link {
   background-color: #f0badb;
   border-radius: 15px 50px;
   padding: 20px;
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   box-sizing: border-box;
   text-align: center;
+  margin: auto 0;
 }
 
 .pokemon-image {
