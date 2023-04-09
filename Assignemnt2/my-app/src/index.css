@@ -31,7 +31,6 @@ div.container {
   text-align: center;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
-  text-align: center;
 }
 
 ul.abilities {
@@ -61,7 +60,8 @@ Link {
 .pokemon-card-about {
   background-color: #f0badb;
   border-radius: 15px 50px;
-  padding: 20px;
+  padding: -320px;
+  box-sizing: border-box;
   text-align: center;
 }
 
