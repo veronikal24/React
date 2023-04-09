@@ -33,9 +33,10 @@ function About() {
   const { name, sprites, height, weight, abilities } = pokemonData;
 
   return (
-    <div>
+    <div className="pokemon-card">
     
       <h2>About Pokemon {name}</h2>
+      <div className="pokemon-card">
       {sprites ? (
         <img src={sprites.front_default} alt={`${name} sprite`} />
       ) : (
@@ -50,6 +51,7 @@ function About() {
         ))}
       </ul>
       <button class = "next-button" onClick={() => navigate(-1)}>Back</button>
+      </div>
     </div>
   );
 }
