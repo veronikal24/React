@@ -93,3 +93,33 @@ Link {
 .next-button button:hover {
   background-color: #92bce9;
 }
+
+Link {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+Link:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: #e2e2e2;
+}
+
+Link h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+Link img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
