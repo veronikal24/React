@@ -65,7 +65,9 @@ Link {
   height: 500px;
   box-sizing: border-box;
   text-align: center;
-  margin: auto 0;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
 }
 
 .pokemon-image {
