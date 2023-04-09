@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import "./index.css";
 
 function Pokedex() {
   const [pokemonList, setPokemonList] = useState([]);
   const [page, setPage] = useState(1);
-  const history = useNavigate();
+  
 
   useEffect(() => {
     async function fetchPokemonList() {
@@ -55,9 +55,9 @@ function Pokedex() {
           ))}
         </ul>
         <div className="pagination">
-          <button onClick={handlePrevPage}>Prev</button>
+          <button class = "next-button"  onClick={handlePrevPage}>Prev</button>
           <span>{page}</span>
-          <button onClick={handleNextPage}>Next</button>
+          <button class = "next-button"  onClick={handleNextPage}>Next</button>
         </div>
       </nav>
     </div>

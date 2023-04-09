@@ -15,7 +15,7 @@ h2 {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
     text-align: center;
-    
+
 }
 .pokemon-list {
   display: grid;
@@ -47,6 +47,7 @@ h2 {
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  align-items: center;
 }
 
 .next-button button:hover {
