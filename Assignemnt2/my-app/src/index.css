@@ -1,55 +1,55 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-h2, h3 {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+h2,
+h3 {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-    text-align: center;
-
-}
-ul{
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
   text-align: center;
 }
-li{
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
+ul {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  text-align: center;
+}
+li {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
   text-align: left;
 }
 div.container {
   text-align: center;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 ul.abilities {
   margin-top: -50px;
   display: inline-block;
   text-align: right;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 ul.general {
   display: inline-block;
   text-align: left;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
   list-style-type: none;
 }
 Link {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
   text-align: center;
   text-decoration-color: black;
 }
@@ -75,7 +75,10 @@ Link {
   text-align: center;
   margin: auto;
   position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .pokemon-image {
@@ -132,4 +135,3 @@ Link img {
   height: auto;
   margin-bottom: 10px;
 }
-
