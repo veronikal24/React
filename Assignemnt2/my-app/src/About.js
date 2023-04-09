@@ -44,11 +44,11 @@ function About() {
         <p>No sprite available</p>
       )}
       <div class="container">
-      <ul class="abilities">
+      <ul class="general">
      
           <li> Height: {height} </li>
           <li> Weight: {weight}</li>
-          <li> Abilities: </li>
+          <li>  <b>Abilities:</b> </li>
      
       </ul>
       </div>
