@@ -38,7 +38,7 @@ function About() {
       <h2>About Pokemon {name}</h2>
       <div className="pokemon-card">
       {sprites ? (
-        <img src={sprites.front_default} alt={`${name} sprite`} />
+        <img className="pokemon-image " src={sprites.front_default} alt={`${name} sprite`} />
       ) : (
         <p>No sprite available</p>
       )}

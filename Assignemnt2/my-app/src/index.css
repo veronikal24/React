@@ -17,6 +17,11 @@ h2 {
     text-align: center;
 
 }
+ul{
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+  text-align: center;
+}
 .pokemon-list {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -25,6 +30,7 @@ h2 {
 
 .pokemon-card {
   background-color: #dfadcc;
+  border-radius: 15px 50px;
   padding: 20px;
   text-align: center;
 }
