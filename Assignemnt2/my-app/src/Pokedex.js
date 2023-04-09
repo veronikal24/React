@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./index.css";
 
 function Pokedex() {
   const [pokemonList, setPokemonList] = useState([]);
   const [page, setPage] = useState(1);
-  
 
   useEffect(() => {
     async function fetchPokemonList() {
@@ -42,23 +41,27 @@ function Pokedex() {
           {pokemonList.map((pokemon) => (
             <div key={pokemon.id} className="pokemon-card">
               <Link
-  to={`/about/${pokemon.id}`}
-  state={{ pokemonData: pokemon }}
->
-  <h3>{pokemon.name}</h3>
-  <img className="pokemon-image "
-    src={pokemon.sprites.front_default}
-    alt={`${pokemon.name} sprite`}
-  />
-</Link>
-             
+                to={`/about/${pokemon.id}`}
+                state={{ pokemonData: pokemon }}
+              >
+                <h3>{pokemon.name}</h3>
+                <img
+                  className="pokemon-image "
+                  src={pokemon.sprites.front_default}
+                  alt={`${pokemon.name} sprite`}
+                />
+              </Link>
             </div>
           ))}
         </ul>
         <div className="pagination">
-          <button class = "next-button"  onClick={handlePrevPage}>Prev</button>
+          <button class="next-button" onClick={handlePrevPage}>
+            Prev
+          </button>
           <span>{page}</span>
-          <button class = "next-button"  onClick={handleNextPage}>Next</button>
+          <button class="next-button" onClick={handleNextPage}>
+            Next
+          </button>
         </div>
       </nav>
     </div>
