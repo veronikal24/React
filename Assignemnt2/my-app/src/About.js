@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import "./index.css";
 
 function About() {
   const { search } = useLocation();
@@ -33,7 +34,7 @@ function About() {
 
   return (
     <div>
-       <button onClick={() => navigate(-1)}>Back</button>
+    
       <h2>About Pokemon {name}</h2>
       {sprites ? (
         <img src={sprites.front_default} alt={`${name} sprite`} />
@@ -48,6 +49,7 @@ function About() {
           <li key={ability.ability.name}>{ability.ability.name}</li>
         ))}
       </ul>
+      <button class = "next-button" onClick={() => navigate(-1)}>Back</button>
     </div>
   );
 }
