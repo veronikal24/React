@@ -17,7 +17,12 @@ h2 {
     text-align: center;
 
 }
-ul,li{
+ul{
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+  text-align: center;
+}
+li{
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
   text-align: center;
@@ -36,6 +41,12 @@ Link {
 
 .pokemon-card {
   background-color: #dfadcc;
+  border-radius: 15px 50px;
+  padding: 20px;
+  text-align: center;
+}
+.pokemon-card-about {
+  background-color: #f0badb;
   border-radius: 15px 50px;
   padding: 20px;
   text-align: center;

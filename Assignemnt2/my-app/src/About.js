@@ -33,10 +33,10 @@ function About() {
   const { name, sprites, height, weight, abilities } = pokemonData;
 
   return (
-    <div className="pokemon-card">
+    <div>
     
       <h2>About Pokemon {name}</h2>
-      <div className="pokemon-card">
+      <div className="pokemon-card-about">
       {sprites ? (
         <img className="pokemon-image " src={sprites.front_default} alt={`${name} sprite`} />
       ) : (
